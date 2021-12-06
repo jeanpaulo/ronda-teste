@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Painel Administrativo - Ronda</title>
+    <meta name="description" content="">
+    <meta name="author" content="templatemo">
+
+    <link href='http://fonts.googleapis.com/css?family=Calibri:400,300,400italic,700' rel='stylesheet' type='text/css'>
+	  <link href="css/all.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="imagex/png" href="icon/icon-ronda.svg">
+  </head>
+
+  <body>
+    <!-- Left column -->
+    <div class="templatemo-flex-row">
+      <div class="templatemo-sidebar">
+        <header class="templatemo-site-header">
+          <!--div class="square"></div-->
+          <img src="icon/logo-ronda.png" class="logo-LG" alt="Logo Ronda" style="width: 170px;">
+          <!--svg class="logo-LG" alt="Logo Gestão de Leitos">Gestão de Leitos</svg-->
+          <h1 id="h1-painel">Painel Administrativo</h1>
+        </header>
+
+        <div class="mobile-menu-icon">
+          <i class="fas fa-bars"></i>
+        </div>
+    
+        <nav class="templatemo-left-nav"> <!--Menu Lateral-->
+          <ul>
+			      <!--Empresa-->
+            <li class="menu-ativo"><a href="empresa.html"><i class="fa fa-building fa-fw"></i>Empresa</a></li>
+            <!--Setor-->
+            <li><a href="setor.html"><i class="fa fa-arrows-alt fa-fw"></i>Setor</a></li>
+			      <!--Perfil-->
+            <li><a href="perfil.html"><i class="fa fa-user-circle fa-fw"></i>Perfil</a></li>
+			      <!--Usuário-->
+            <li><a href="usuario.html"><i class="fa fa-fingerprint fa-fw"></i>Usuário</a></li>
+		      	<!--Fluxo Automático-->
+            <li><a href="incluir_pessoa.html"><i class="fa fa-stream fa-fw"></i>Incluir Pessoa</a></li>
+			      <!--Acomodação-->
+            <li><a href="acomodacao.html"><i class="fa fa-bed fa-fw"></i>Acomodação</a></li>
+		      	<!--Operação-->
+            <li><a href="grupo_ronda.html"><i class="fa fa-cog fa-fw"></i>Grupo Ronda</a></li>
+		      	<!--Módulo-->
+            <li><a href="atributos_ronda.html"><i class="fa fa-dice-d6 fa-fw"></i>Atributos Ronda</a></li>
+            <!--Painel Operacional-->
+            <li><a href="po_index.html"><i class="fa fa-dice-d6 fa-fw"></i>Painel Operacional</a></li>
+            <!--Sair-->
+			      <li><a href="login.html"><i class="fa fa-sign-out-alt fa-fw"></i>Sair</a></li>
+          </ul>
+        </nav>
+      </div>
+	  
+      <!-- Main content -->
+      <div class="templatemo-content col-1 light-gray-bg">
+		
+		    <!--Fundo principal-->
+        <div class="templatemo-content-container">
+          <div class="templatemo-content-widget black-bg">
+
+            <h2 class="margin-bottom-10">Empresa <!--Título da Página-->
+              <div class="btn-home"><a href="index.html" title="Home"><i class="fas fa-home fa-fw"></i></a></div> <!--Home-->
+            </h2>
+
+            <div> <!--Botão-->
+              <a href="empresa_nova.html"><button type="submit" class="templatemo-green-button margin-bottom-10">Nova Empresa</button></a>
+            </div>
+            
+            </br>
+
+            <div id="tblsetor_wrapper" class="dataTables_wrapper no-footer">
+
+              <div class="dataTables_length" id="tblsetor_length" style="float: left;">
+                <label>Mostrando 
+                    <select name="tblsetor_length" aria-controls="tblsetor" class="input-select">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>  registros por página
+                </label>
+              </div>
+              <div id="tblsetor_filter" class="dataTables_filter" style="float: right;">
+                <label>Localizar: <input type="search" class="input-search" placeholder="" aria-controls="tblsetor"></label>
+              </div>
+              <table id="tblsetor" class="table table-responsive">
+                  <thead>
+                    <tr>
+                        <td>NOME</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="linhaheight">
+                      <td>
+                          Empresa Hospital AAA
+                      </td>
+                      <td style="text-align:right;">
+                          <a href="#" title="Editar" onclick="javascript: editar('/Adm/Setor?id_setor=27');"><button type="button" class="templatemo-black-button"><i class="fas fa-edit fa-fw"></i></button></a>
+                          <a href="#" title="Excluir" onclick="javascript: excluir('/Adm/ExcluirSetor?id_empresa=1&amp;id_setor=27', 'Deseja excluir este setor?');"><button type="button" class="templatemo-black-button"><i class="fas fa-trash fa-fw"></i></button></a>                                  
+                      </td>
+                    </tr>
+                    <tr class="linhaheight">
+                      <td>
+                          Empresa Hospital BBB
+                      </td>
+                      <td style="text-align:right;">                               
+                          <a href="#" title="Editar" onclick="javascript: editar('/Adm/Setor?id_setor=28');"><button type="button" class="templatemo-black-button"><i class="fas fa-edit fa-fw"></i></button></a>
+                          <a href="#" title="Excluir" onclick="javascript: excluir('/Adm/ExcluirSetor?id_empresa=1&amp;id_setor=28', 'Deseja excluir este setor?');"><button type="button" class="templatemo-black-button"><i class="fas fa-trash fa-fw"></i></button></a>                                    
+                      </td>
+                    </tr>
+                    <tr class="linhaheight">
+                      <td>
+                          Empresa Hospital CCC
+                      </td>
+                      <td style="text-align:right;">                               
+                          <a href="#" title="Editar" onclick="javascript: editar('/Adm/Setor?id_setor=28');"><button type="button" class="templatemo-black-button"><i class="fas fa-edit fa-fw"></i></button></a>
+                          <a href="#" title="Excluir" onclick="javascript: excluir('/Adm/ExcluirSetor?id_empresa=1&amp;id_setor=28', 'Deseja excluir este setor?');"><button type="button" class="templatemo-black-button"><i class="fas fa-trash fa-fw"></i></button></a>                                    
+                      </td>
+                    </tr>
+                  </tbody>
+              </table>
+              <div class="dataTables_info info_paginas" id="tblsetor_info" role="status" aria-live="polite">Mostrando página 1 de 1
+              </div>
+            </div>
+          </div>
+          
+          <!-- <footer class="text-right">
+            <p>Copyright &copy; 2021 
+            | Desenvolvido por <a href="http://www.exporj.com.br/" target="s" class="texto-link">ExpoRJ</a></p>
+          </footer> -->
+
+        </div>
+      </div>
+
+    </div>
+    <!-- JS -->
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>        <!-- jQuery -->
+    <script type="text/javascript" src="js/bootstrap-filestyle.min.js"></script>  <!-- http://markusslima.github.io/bootstrap-filestyle/ -->
+    <script type="text/javascript" src="js/templatemo-script.js"></script>        <!-- Templatemo Script -->
+  </body>
+</html>

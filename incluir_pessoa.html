@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Painel Administrativo - Ronda</title>
+        <meta name="description" content="">
+        <meta name="author" content="templatemo">
+
+        <link href='http://fonts.googleapis.com/css?family=Calibri:400,300,400italic,700' rel='stylesheet' type='text/css'>
+        <link href="css/all.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/templatemo-style.css" rel="stylesheet">
+        <link rel="shortcut icon" type="imagex/png" href="icon/icon-ronda.svg">
+        <!-- <link href="/Content/mais.css" rel="stylesheet"/> -->
+        <!-- <link href="/Content/datatables.min.css" rel="stylesheet"/> -->
+        <!-- <link href="/Content/jquery.modal.min.css" rel="stylesheet"/> -->
+
+        <script src="/scripts/adm/jquery-1.11.2.min.js"></script>
+        <script src="/scripts/adm/bootstrap-filestyle.min.js"></script>
+        <script src="/scripts/adm/templatemo-script.js"></script>
+        <script src="/scripts/datatables.min.js"></script>
+        <script src="/scripts/funcoes.js"></script>
+    </head>
+
+<body>
+    
+    <div class="templatemo-flex-row">
+        <div class="templatemo-sidebar">
+            <header class="templatemo-site-header">
+                <!--div class="square"></div-->
+                <img src="icon/logo-ronda.png" class="logo-LG" alt="Logo Ronda" style="width: 170px;">
+                <!--svg class="logo-LG" alt="Logo Gestão de Leitos">Gestão de Leitos</svg-->
+                <h1 id="h1-painel">Painel Administrativo</h1>
+            </header>
+
+            <div class="mobile-menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <nav class="templatemo-left-nav"> <!--Menu Lateral-->
+                <ul>
+                  <!--Empresa-->
+                  <li><a href="empresa.html"><i class="fa fa-building fa-fw"></i>Empresa</a></li>
+                  <!--Setor-->
+                  <li><a href="setor.html"><i class="fa fa-arrows-alt fa-fw"></i>Setor</a></li>
+                  <!--Perfil-->
+                  <li><a href="perfil.html"><i class="fa fa-user-circle fa-fw"></i>Perfil</a></li>
+                  <!--Usuário-->
+                  <li><a href="usuario.html"><i class="fa fa-fingerprint fa-fw"></i>Usuário</a></li>
+                  <!--Fluxo Automático-->
+                  <li class="menu-ativo"><a href="incluir_pessoa.html"><i class="fa fa-stream fa-fw"></i>Incluir Pessoa</a></li>
+                  <!--Acomodação-->
+                  <li><a href="acomodacao.html"><i class="fa fa-bed fa-fw"></i>Acomodação</a></li>
+                  <!--Operação-->
+                  <li><a href="grupo_ronda.html"><i class="fa fa-cog fa-fw"></i>Grupo Ronda</a></li>
+                  <!--Módulo-->
+                  <li><a href="atributos_ronda.html"><i class="fa fa-dice-d6 fa-fw"></i>Atributos Ronda</a></li>
+                  <!--Painel Operacional-->
+                  <li><a href="po_index.html"><i class="fa fa-dice-d6 fa-fw"></i>Painel Operacional</a></li>
+                  <!--Sair-->
+                  <li><a href="login.html"><i class="fa fa-sign-out-alt fa-fw"></i>Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main content -->
+        <div class="templatemo-content col-1 light-gray-bg">
+            
+            <!--Fundo principal-->
+                <div class="templatemo-content-container">
+                    <div class="templatemo-content-widget black-bg">
+                        <h2 class="margin-bottom-10">Nova Pessoa <!--Título da Página-->
+                            <div class="btn-home"><a href="index.html" title="Home"><i class="fas fa-home fa-fw"></i></a></div> <!--Home-->
+                        </h2>
+
+            <form action="/Adm/SalvarSetor" class="templatemo-login-form" enctype="multipart/form-data" id="FormSetor" method="post" name="FormSetor">                
+                    <div class="row form-group">
+                            <div class="col-lg-5 col-md-5 form-group">
+                                <label for="inputFirstName">Nome Completo</label> <!--Nome do Usuário-->
+                                <input id="id_Perfil" name="Perfil.id_Perfil" type="hidden" value="" />
+                                
+                                <input Class="form-control" data-val="true" data-val-required="O nome do Setor é obrigatório." id="nome_Setor" name="Setor.nome_Setor" placeholder="Nome Completo" type="text" value="" />
+                                <div class="formLine">
+                                    <span class="field-validation-valid text-danger-yellow" data-valmsg-for="Setor.nome_Setor" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 form-group">
+                                <label for="inputFirstName">CPF</label> <!--Login-->
+                                <input id="id_Perfil" name="Perfil.id_Perfil" type="hidden" value="" />
+                                
+                                <input Class="form-control" data-val="true" data-val-required="O nome do Setor é obrigatório." id="nome_Setor" name="Setor.nome_Setor" placeholder="CPF" type="text" value="" />
+                                <div class="formLine">
+                                    <span class="field-validation-valid text-danger-yellow" data-valmsg-for="Setor.nome_Setor" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 form-group">
+                                <label for="inputFirstName">Gênero</label> <!--Senha-->
+                                <input id="id_Perfil" name="Perfil.id_Perfil" type="hidden" value="" />
+                                
+                                <input Class="form-control" data-val="true" data-val-required="O nome do Setor é obrigatório." id="nome_Setor" name="Setor.nome_Setor" placeholder="Gênero" type="text" value="" />
+                                <div class="formLine">
+                                    <span class="field-validation-valid text-danger-yellow" data-valmsg-for="Setor.nome_Setor" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 form-group">
+                                <input data-val="true" data-val-required="O Código da empresa do Setor é obrigatório." id="hdnid_Empresa" name="Setor.id_Empresa" type="hidden" value="" />
+                                <label for="control-label templatemo-block">Tipo Pessoa</label> <!--Perfis-->
+                                <div class="custom-select">
+                                    <select id="selEmpresa" class="form-control">
+                                                <option value="1">---</option>
+                                                <option value="2">Médico(a)</option>
+                                                <option value="3">Enfermeiro(a)</option>
+                                                <option value="4">Téc. Enfermagem</option>
+                                    </select>
+                                </div>
+                                <div class="formLine">
+                                    <span class="field-validation-valid text-danger-yellow" data-valmsg-for="Setor.id_Empresa" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-1 col-md-1 form-group">
+                                <label for="inputFirstName">DDD</label> <!--DDD-->
+                                <input id="id_Perfil" name="Perfil.id_Perfil" type="hidden" value="" />
+                                
+                                <input Class="form-control" data-val="true" data-val-required="O nome do Setor é obrigatório." id="nome_Setor" name="Setor.nome_Setor" placeholder="DDD" type="text" value="" />
+                                <div class="formLine">
+                                    <span class="field-validation-valid text-danger-yellow" data-valmsg-for="Setor.nome_Setor" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 form-group">
+                                <label for="inputFirstName">Telefone</label> <!--Telefone-->
+                                <input id="id_Perfil" name="Perfil.id_Perfil" type="hidden" value="" />
+                                
+                                <input Class="form-control" data-val="true" data-val-required="O nome do Setor é obrigatório." id="nome_Setor" name="Setor.nome_Setor" placeholder="Telefone" type="text" value="" />
+                                <div class="formLine">
+                                    <span class="field-validation-valid text-danger-yellow" data-valmsg-for="Setor.nome_Setor" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-md-5 form-group">
+                                <label for="inputFirstName">Email</label> <!--Email-->
+                                <input id="id_Perfil" name="Perfil.id_Perfil" type="hidden" value="" />
+                                
+                                <input Class="form-control" data-val="true" data-val-required="O nome do Setor é obrigatório." id="nome_Setor" name="Setor.nome_Setor" placeholder="Email" type="text" value="" />
+                                <div class="formLine">
+                                    <span class="field-validation-valid text-danger-yellow" data-valmsg-for="Setor.nome_Setor" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 form-group">
+                                <label for="inputFirstName">CEP</label> <!--CEP-->
+                                <input id="id_Perfil" name="Perfil.id_Perfil" type="hidden" value="" />
+                                
+                                <input Class="form-control" data-val="true" data-val-required="O nome do Setor é obrigatório." id="nome_Setor" name="Setor.nome_Setor" placeholder="CEP" type="text" value="" />
+                                <div class="formLine">
+                                    <span class="field-validation-valid text-danger-yellow" data-valmsg-for="Setor.nome_Setor" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-md-5 form-group">
+                                <label for="inputFirstName">Logradouro</label> <!--Logradouro-->
+                                <input id="id_Perfil" name="Perfil.id_Perfil" type="hidden" value="" />
+                                
+                                <input Class="form-control" data-val="true" data-val-required="O nome do Setor é obrigatório." id="nome_Setor" name="Setor.nome_Setor" placeholder="Logradouro" type="text" value="" />
+                                <div class="formLine">
+                                    <span class="field-validation-valid text-danger-yellow" data-valmsg-for="Setor.nome_Setor" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 form-group">
+                                <label for="inputFirstName">Número</label> <!--Número-->
+                                <input id="id_Perfil" name="Perfil.id_Perfil" type="hidden" value="" />
+                                
+                                <input Class="form-control" data-val="true" data-val-required="O nome do Setor é obrigatório." id="nome_Setor" name="Setor.nome_Setor" placeholder="Número" type="text" value="" />
+                                <div class="formLine">
+                                    <span class="field-validation-valid text-danger-yellow" data-valmsg-for="Setor.nome_Setor" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 form-group">
+                                <label for="inputFirstName">Complemento</label> <!--Complemento-->
+                                <input id="id_Perfil" name="Perfil.id_Perfil" type="hidden" value="" />
+                                
+                                <input Class="form-control" data-val="true" data-val-required="O nome do Setor é obrigatório." id="nome_Setor" name="Setor.nome_Setor" placeholder="Complemento" type="text" value="" />
+                                <div class="formLine">
+                                    <span class="field-validation-valid text-danger-yellow" data-valmsg-for="Setor.nome_Setor" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-md-5 form-group">
+                                <label for="inputFirstName">Bairro</label> <!--Bairro-->
+                                <input id="id_Perfil" name="Perfil.id_Perfil" type="hidden" value="" />
+                                
+                                <input Class="form-control" data-val="true" data-val-required="O nome do Setor é obrigatório." id="nome_Setor" name="Setor.nome_Setor" placeholder="Bairro" type="text" value="" />
+                                <div class="formLine">
+                                    <span class="field-validation-valid text-danger-yellow" data-valmsg-for="Setor.nome_Setor" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 form-group">
+                                <label for="inputFirstName">Cidade</label> <!--Cidade-->
+                                <input id="id_Perfil" name="Perfil.id_Perfil" type="hidden" value="" />
+                                
+                                <input Class="form-control" data-val="true" data-val-required="O nome do Setor é obrigatório." id="nome_Setor" name="Setor.nome_Setor" placeholder="Cidade" type="text" value="" />
+                                <div class="formLine">
+                                    <span class="field-validation-valid text-danger-yellow" data-valmsg-for="Setor.nome_Setor" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 form-group">   
+                                <input data-val="true" data-val-required="O Código da empresa do Setor é obrigatório." id="hdnid_Empresa" name="Setor.id_Empresa" type="hidden" value="" />               
+                                <label for="control-label templatemo-block">UF</label> <!--Estados-->
+                                <div class="custom-select">
+                                    <select id="selEstados" class="form-control">
+                                    <option value="AC">AC</option>
+                                    <option value="AL">AL</option>
+                                    <option value="AM">AM</option>
+                                    <option value="AP">AP</option>
+                                    <option value="BA">BA</option>
+                                    <option value="CE">CE</option>
+                                    <option value="DF">DF</option>
+                                    <option value="ES">ES</option>
+                                    <option value="GO">GO</option>
+                                    <option value="MA">MA</option>
+                                    <option value="MG">MG</option>
+                                    <option value="MS">MS</option>
+                                    <option value="MT">MT</option>
+                                    <option value="PA">PA</option>
+                                    <option value="PB">PB</option>
+                                    <option value="PE">PE</option>
+                                    <option value="PI">PI</option>
+                                    <option value="PR">PR</option>
+                                    <option value="RJ">RJ</option>
+                                    <option value="RN">RN</option>
+                                    <option value="RO">RO</option>
+                                    <option value="RR">RR</option>
+                                    <option value="RR">RS</option>
+                                    <option value="SC">SC</option>
+                                    <option value="SE">SE</option>
+                                    <option value="SP">SP</option>
+                                    <option value="TO">TO</option>
+                                    </select>
+                                </div>
+                                <div class="formLine">
+                                    <span class="field-validation-valid text-danger-yellow" data-valmsg-for="Setor.id_Empresa" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 form-group">
+                                <label for="inputFirstName">CRM</label> <!--CRM-->
+                                <input id="id_Perfil" name="Perfil.id_Perfil" type="hidden" value="" />
+                                
+                                <input Class="form-control" data-val="true" data-val-required="O nome do Setor é obrigatório." id="nome_Setor" name="Setor.nome_Setor" placeholder="CRM" type="text" value="" />
+                                <div class="formLine">
+                                    <span class="field-validation-valid text-danger-yellow" data-valmsg-for="Setor.nome_Setor" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 form-group">
+                                <label for="inputFirstName">Nascimento</label> <!--Nascimento-->
+                                <input id="id_Perfil" name="Perfil.id_Perfil" type="hidden" value="" />
+                                
+                                <input Class="form-control" data-val="true" data-val-required="O nome do Setor é obrigatório." id="nome_Setor" name="Setor.nome_Setor" placeholder="Nascimento" type="text" value="" />
+                                <div class="formLine">
+                                    <span class="field-validation-valid text-danger-yellow" data-valmsg-for="Setor.nome_Setor" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 form-group">
+                                <input data-val="true" data-val-required="O Código da empresa do Setor é obrigatório." id="hdnid_Empresa" name="Setor.id_Empresa" type="hidden" value="" />
+                                <label for="control-label templatemo-block">Ativo</label> <!--Estados-->
+                                <div class="custom-select">
+                                    <select id="selEmpresa" class="form-control">
+                                                <option value="1">Sim</option>
+                                                <option value="2">Não</option>
+                                    </select>
+                                </div>
+                                <div class="formLine">
+                                    <span class="field-validation-valid text-danger-yellow" data-valmsg-for="Setor.id_Empresa" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                    </div>
+                            
+                            <div class="form-group text-left">
+                                <button type="button" class="templatemo-white-button" onclick="javascript: excluir('/Adm/ExcluirSetor', 'Deseja excluir este setor?');">Apagar</button>
+                                <button type="button" class="templatemo-blue-button" onclick="javascript: salvarsetor('/Adm/SalvarSetor');">Salvar</button>
+                            </div>
+            </form>
+        </div>
+        <!-- <footer class="text-right">
+            <p>Copyright &copy; 2021 
+                | Desenvolvido por <a href="http://www.exporj.com.br/" target="s" class="texto-link">ExpoRJ</a>
+            </p>
+        </footer> -->
+            </div>
+        </div>
+        <script src="/scripts/valida.setor.js"></script>
+
+        </div>
+    </div>
+
+
+    <script src="/scripts/homelayout.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Painel Administrativo - Ronda</title>
+    <meta name="description" content="">
+    <meta name="author" content="templatemo">
+
+    <link href='http://fonts.googleapis.com/css?family=Calibri:400,300,400italic,700' rel='stylesheet' type='text/css'>
+	  <link href="css/all.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="imagex/png" href="icon/icon-ronda.svg">
+    <link href="css/step-style.css" rel="stylesheet">
+  </head>
+
+  <body> 
+    <!-- Left column -->
+    <div class="templatemo-flex-row">
+        <div class="templatemo-sidebar">
+            <header class="templatemo-site-header">
+              <!--div class="square"></div-->
+              <img src="icon/logo-ronda.png" class="logo-LG" alt="Logo Ronda" style="width: 170px;">
+              <!--svg class="logo-LG" alt="Logo Gestão de Leitos">Gestão de Leitos</svg-->
+              <h1 id="h1-painel">Painel Operacional</h1>
+            </header>
+    
+            <div class="mobile-menu-icon">
+              <i class="fas fa-bars"></i>
+            </div>
+        
+            <nav class="templatemo-left-nav"> <!--Menu Lateral-->
+              <ul>
+                <!--Admissão de Paciente-->
+                <li><a href="po_admissao_de_paciente.html"><i class="fa fa-notes-medical fa-fw"></i>Admissão de Paciente</a></li>
+                <!--Movimentação de Paciente-->
+                <li><a href="po_movimentacao_paciente.html"><i class="fa fa-arrows-alt fa-fw"></i>Movimentação Paciente</a></li>
+                <!--Rotina Médica-->
+                <li class="menu-ativo"><a href="po_rotina_medica.html"><i class="fa fa-heartbeat fa-fw"></i>Rotina Médica</a></li>
+                <!--Plantão Médico-->
+                <li><a href="po_plantao_medico.html"><i class="fa fa-user-md fa-fw"></i>Plantão Médico</a></li>
+                <!--Alta Médica-->
+                <li><a href="po_alta_medica.html"><i class="fa fa-hand-holding-heart fa-fw"></i>Alta Médica</a></li>
+                <!--Painel Administrativo-->
+                <li><a href="index.html"><i class="fa fa-exchange-alt fa-fw"></i>Painel Administrativo</a></li>
+                <!--Sair-->
+                <li><a href="login.html"><i class="fa fa-sign-out-alt fa-fw"></i>Sair</a></li>
+              </ul>
+            </nav>
+          </div>
+
+      <!-- Main content -->
+      <div class="templatemo-content col-1 light-gray-bg">
+		
+		    <!--Fundo principal-->
+        <div class="templatemo-content-container">
+          <div class="templatemo-content-widget black-bg">
+
+            <h2 class="margin-bottom-10">Nova Rotina <!--Título da Página-->
+              <div class="btn-home"><a href="po_index.html" title="Home"><i class="fas fa-home fa-fw"></i></a></div> <!--Home-->
+            </h2>
+
+            <div class="header-rotina-medica">
+                <div>Paciente: <h3>Caio da Silva</h3></div>
+                <p><strong>Alergias: </strong>Camarão, Dipirona</p>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 box-home">
+                  <!-- <a href="#.html"> -->
+                    <div class="box-rotina-nova">
+                        <div class="title-box-rotina">Exame Geral
+                            <div class="btn-eye" data-toggle="modal" data-target="#modalExame"><a href="#.html"><i class="fas fa-eye fa-fw"></i></a></div>
+                        </div>
+                        <div class="content-box-rotina">
+                            <p>Paciente reativo, acordado, lúcido e afebril. 
+                                Corado, hidratado, acinótico, ictérico. 
+                                Boa PCP, FAN, reflexos presentes. 
+                                Abdomen - flácido, aparentemente indolor.
+                            </p>
+                        </div>
+                    </div>
+                  <!-- </a> -->
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 box-home">
+                    <a href="#.html">
+                      <div class="box-rotina-nova">
+                          <div class="title-box-rotina">Neurológico
+                            <div class="btn-eye" data-toggle="modal" data-target="#modalNeurologico"><a href="#.html"><i class="fas fa-eye fa-fw"></i></a></div>
+                          </div>
+                          <div class="content-box-rotina">
+                              <p>Convulção: xxx</p>
+                              <p>USTF: aguarda</p>
+                              <p>Sedação: Midazolam 50mcg/kg em boulas</p>
+                          </div>
+                      </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 box-home">
+                    <a href="#.html">
+                      <div class="box-rotina-nova">
+                          <div class="title-box-rotina">Infeccioso
+                              <div class="btn-eye" data-toggle="modal" data-target="#modalInfeccioso"><a href="#.html"><i class="fas fa-eye fa-fw"></i></a></div>
+                          </div>
+                          <div class="content-box-rotina">
+                              <p>Plaquetas: 18/01: 203 mil plaquetas</p>
+                              <p>TORCHS/HIV: VDRL e HIV negativo</p>
+                              <p>PCR: 18/01: HMC - EA</p></p>
+                          </div>
+                      </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 box-home">
+                    <a href="#.html">
+                      <div class="box-rotina-nova">
+                          <div class="title-box-rotina">Cardiovascular
+                            <div class="btn-eye" data-toggle="modal" data-target="#modalCardiovascular"><a href="#.html"><i class="fas fa-eye fa-fw"></i></a></div>
+                          </div>
+                          <div class="content-box-rotina">
+                              <p>Noradrenalina</p>
+                              <p>ECO: xxx</p>
+                          </div>
+                      </div>
+                    </a>
+                </div>
+
+              </div>
+            </div>
+            
+          </div>
+          
+          <!-- <footer class="text-right">
+            <p>Copyright &copy; 2021 
+            | Desenvolvido por <a href="http://www.exporj.com.br/" target="s" class="texto-link">ExpoRJ</a></p>
+          </footer> -->
+
+        </div>
+      </div>
+
+    </div>
+
+    <!--MODAL EXAME GERAL-->
+    <div class="modal" id="modalExame" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <!--Header-->
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Exames Gerais</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <!--Body-->
+          <div class="modal-body">
+
+            <div class="form-group">                  
+                <label for="">BH</label>
+                <input type="text" class="form-control" id="" placeholder="">                  
+            </div>
+            <div class="form-group">                  
+              <label for="">Diurese</label>
+              <input type="text" class="form-control" id="" placeholder="">                  
+            </div>
+            <div class="form-group">                  
+              <label for="">Febre</label>
+              <input type="text" class="form-control" id="" placeholder="">                  
+            </div>
+
+          </div>
+          <!--Footer-->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--MODAL NEUROLOGICO-->
+    <div class="modal" id="modalNeurologico" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <!--Header-->
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Neurológico</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <!--Body-->
+          <div class="modal-body">
+
+          <div class="form-group">
+            <label for="">Medicações habituais</label>
+            <input type="text" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="control-label templatemo-block">Sedação</label>
+            <select class="form-control">
+              <option value="AC">---</option>
+              <option value="AC">Midazolam (dose)</option>
+              <option value="AC">Fentanil (dose)</option>
+              <option value="AC">Propofol (dose)</option>
+              <option value="AC">Precedex (dose)</option>
+              <option value="AC">Cetamina (dose)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="control-label templatemo-block">Parecer / Solicitação de exames</label>
+            <select class="form-control">
+              <option value="AC">---</option>
+              <option value="AC">Parecer da neurologia</option>
+              <option value="AC">TCC</option>
+              <option value="AC">RNM</option>
+              <option value="AC">EEG</option>
+            </select>
+          </div>
+
+          </div>
+          <!--Footer-->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--MODAL INFECCIOSO-->
+    <div class="modal" id="modalInfeccioso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <!--Header-->
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Infeccioso</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <!--Body-->
+          <div class="modal-body">
+
+            <div class="form-group">
+              <label for="">Culturas</label>
+              <input type="text" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label for="control-label templatemo-block">Parecer / Solicitação de exames</label>
+              <select class="form-control">
+                <option value="AC">---</option>
+                <option value="AC">Parecer infectologia</option>
+                <option value="AC">Laboratório</option>
+              </select>
+            </div>
+          </div>
+
+          <!--Footer-->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--MODAL CARDIOVASCULAR-->
+    <div class="modal" id="modalCardiovascular" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <!--Header-->
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Infeccioso</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <!--Body-->
+          <div class="modal-body">
+
+            <h3>Aminas:</h3>
+                <div class="form-group">
+                    <input type="checkbox" class="form-control" id="Noradrenalina" value="Noradrenalina">
+                    <label for="Noradrenalina">Noradrenalina (dose)</label>                  
+                </div>
+                <div class="form-group">
+                  <input type="checkbox" class="form-control" id="Adrenalina" value="Adrenalina">  
+                  <label for="Adrenalina">Adrenalina (dose)</label>                
+                </div>
+                <div class="form-group">
+                  <input type="checkbox" class="form-control" id="Dobutamina" value="Dobutamina">  
+                  <label for="Dobutamina">Dobutamina (dose)</label>                
+                </div>
+                <div class="form-group">
+                  <input type="checkbox" class="form-control" id="Vasopressina" value="Vasopressina">  
+                  <label for="Vasopressina">Vasopressina (dose)</label>                
+                </div>
+
+                <h3>Parecer / Solicitação de exames:</h3>
+                <div class="form-group">
+                    <input type="checkbox" class="form-control" id="Parecer" value="Parecer">
+                    <label for="Parecer">Parecer cardiologia</label>                  
+                </div>
+                <div class="form-group">
+                  <input type="checkbox" class="form-control" id="Ecocardiograma" value="Ecocardiograma">  
+                  <label for="Ecocardiograma">Ecocardiograma (TT ou TE)</label>                
+                </div>
+                <div class="form-group">
+                  <input type="checkbox" class="form-control" id="ECG" value="ECG">  
+                  <label for="ECG">ECG</label>                
+                </div>
+
+          </div>
+
+          <!--Footer-->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/templatemo-script.js"></script>        <!-- Templatemo Script -->
+    <script type="text/javascript" src="js/step-script.js"></script>
+  </body>
+</html>

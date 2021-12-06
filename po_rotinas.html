@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Painel Administrativo - Ronda</title>
+    <meta name="description" content="">
+    <meta name="author" content="templatemo">
+
+    <link href='http://fonts.googleapis.com/css?family=Calibri:400,300,400italic,700' rel='stylesheet' type='text/css'>
+	  <link href="css/all.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="imagex/png" href="icon/icon-ronda.svg">
+    <link href="css/step-style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Left column -->
+    <div class="templatemo-flex-row">
+        <div class="templatemo-sidebar">
+            <header class="templatemo-site-header">
+              <!--div class="square"></div-->
+              <img src="icon/logo-ronda.png" class="logo-LG" alt="Logo Ronda" style="width: 170px;">
+              <!--svg class="logo-LG" alt="Logo Gestão de Leitos">Gestão de Leitos</svg-->
+              <h1 id="h1-painel">Painel Operacional</h1>
+            </header>
+    
+            <div class="mobile-menu-icon">
+              <i class="fas fa-bars"></i>
+            </div>
+        
+            <nav class="templatemo-left-nav"> <!--Menu Lateral-->
+              <ul>
+                <!--Admissão de Paciente-->
+                <li><a href="po_admissao_de_paciente.html"><i class="fa fa-notes-medical fa-fw"></i>Admissão de Paciente</a></li>
+                <!--Movimentação de Paciente-->
+                <li><a href="po_movimentacao_paciente.html"><i class="fa fa-arrows-alt fa-fw"></i>Movimentação Paciente</a></li>
+                <!--Rotina Médica-->
+                <li class="menu-ativo"><a href="po_rotina_medica.html"><i class="fa fa-heartbeat fa-fw"></i>Rotina Médica</a></li>
+                <!--Plantão Médico-->
+                <li><a href="po_plantao_medico.html"><i class="fa fa-user-md fa-fw"></i>Plantão Médico</a></li>
+                <!--Alta Médica-->
+                <li><a href="po_alta_medica.html"><i class="fa fa-hand-holding-heart fa-fw"></i>Alta Médica</a></li>
+                <!--Painel Administrativo-->
+                <li><a href="index.html"><i class="fa fa-exchange-alt fa-fw"></i>Painel Administrativo</a></li>
+                <!--Sair-->
+                <li><a href="login.html"><i class="fa fa-sign-out-alt fa-fw"></i>Sair</a></li>
+              </ul>
+            </nav>
+          </div>
+	  
+      <!-- Main content -->
+      <div class="templatemo-content col-1 light-gray-bg">
+		
+		    <!--Fundo principal-->
+        <div class="templatemo-content-container">
+          <div class="templatemo-content-widget black-bg">
+
+            <h2 class="margin-bottom-10">Rotinas <!--Título da Página-->
+              <div class="btn-home"><a href="po_index.html" title="Home"><i class="fas fa-home fa-fw"></i></a></div> <!--Home-->
+            </h2>
+
+            <div> <!--Botão-->
+              <button type="button" class="templatemo-green-button margin-bottom-10" data-toggle="modal" data-target="#modalRotina">Nova Rotina</button>
+            </div>
+             
+            </br>
+
+            <!-- CONTEÚDO -->
+            <div id="tblsetor_wrapper" class="dataTables_wrapper no-footer">
+                <div class="dataTables_length" id="tblsetor_length" style="float: left;">
+                    <label>Mostrando 
+                        <select name="tblsetor_length" aria-controls="tblsetor" class="input-select">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select> registros por página
+                    </label>
+                </div>
+                <div id="tblsetor_filter" class="dataTables_filter" style="float: right;">
+                    <label>Localizar: <input type="search" class="input-search" placeholder="" aria-controls="tblsetor"></label>
+                </div>
+                
+                <table id="tblacomodacao" class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <td>DATA</td>
+                            <td>MÉDICO RESPONSÁVEL</td>
+                            <td>STATUS</td>
+                            <td>VISUALIZAR</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="linhaheight">
+                            <td>01/01/2022</td>
+                            <td>Dr. Altamir Mendes de Moraes</td>
+                            <td>Iniciado</td>
+                            <td>
+                                <a href="#" title="Ver" onclick="javascript: ver('#');"><button type="button" class="templatemo-black-button"><i class="far fa-eye"></i></button></a>
+                            </td>
+                        </tr>
+                        <tr class="linhaheight">
+                            <td>01/01/2022</td>
+                            <td>Dr. Leandro Machado</td>
+                            <td>Finalizado</td>
+                            <td>
+                                <a href="#" title="Ver" onclick="javascript: ver('#');"><button type="button" class="templatemo-black-button"><i class="fas fa-eye"></i></button></a>
+                            </td>
+                        </tr>
+                        <tr class="linhaheight">
+                            <td>01/01/2022</td>
+                            <td>Dra. Solange de Albuquerque Santiago</td>
+                            <td>Cancelado</td>
+                            <td>
+                                <a href="#" title="Ver" onclick="javascript: ver('#');"><button type="button" class="templatemo-black-button"><i class="fas fa-eye"></i></button></a>
+                            </td>
+                        </tr>
+                        <tr class="linhaheight">
+                            <td>01/01/2022</td>
+                            <td>Dra. Sandra Maria Constantino</td>
+                            <td>Iniciado</td>
+                            <td>
+                                <a href="#" title="Ver" onclick="javascript: ver('#');"><button type="button" class="templatemo-black-button"><i class="far fa-eye"></i></button></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="dataTables_info info_paginas" id="tblsetor_info" role="status" aria-live="polite">Mostrando página 1 de 1
+                </div>
+            </div>
+            
+          </div>
+          
+          <!-- <footer class="text-right">
+            <p>Copyright &copy; 2021 
+            | Desenvolvido por <a href="http://www.exporj.com.br/" target="s" class="texto-link">ExpoRJ</a></p>
+          </footer> -->
+
+        </div>
+      </div>
+
+    </div>
+    
+    <!-- Modal: modalCart -->
+    <div class="modal" id="modalRotina" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="false">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">Deseja copiar última rotina?</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <!--Body-->
+        <!-- <div class="modal-body"></div> -->
+        <!--Footer-->
+        <div class="modal-footer">
+          <a href="po_rotina_ultima.html"><button type="submit" class="btn btn-primary">Sim</button></a>
+          <a href="po_rotina_nova.html"><button type="submit" class="btn btn-outline-primary">Não</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal: modalCart -->
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/templatemo-script.js"></script>        <!-- Templatemo Script -->
+    <script type="text/javascript" src="js/step-script.js"></script>
+  </body>
+</html>

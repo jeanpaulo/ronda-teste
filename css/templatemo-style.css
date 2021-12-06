@@ -1,0 +1,1139 @@
+/*
+
+Visual Admin Template
+http://www.templatemo.com/preview/templatemo_455_visual_admin
+
+TABLE OF CONTENT
+	1. Universal Styles
+	2. Left Column
+	3. Right Column
+	4. Charts & Maps
+	5. Login
+	6. Manage Users
+	7. Preferences
+	8. Media Queries
+----------------------------------------------*/
+/* 1. Universal Styles
+----------------------------------------------*/
+* {	font-family: 'Calibri', 'Open Sans', sans-serif; }
+html {height: 100vh;} /*-------PROPRIEDADE PARA CONSEGUIR INSERIR UM DIV COM ALTURA 100% DA VIEWPORT-------*/
+body {	font-size: 13px; color: #fff; }
+body, .templatemo-left-nav { background: #0f1223; } /*cor do fundo do menu lateral*/
+h1, h2, h3 { margin: 0; }
+h1 {
+	position: relative;
+	top: 15px;
+}
+h2 {
+	font-size: 1.6em;
+	color: #3FE8CF;
+	border-bottom: 1px solid #39566b;
+	padding-bottom: 8px;
+}
+h3 {
+	color: #fff;
+	font-size: 1.4em;
+}
+ul {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a:hover { text-decoration: none; }
+a:visited { text-decoration: none; }
+nav li {
+	font-size: 1.1em;
+	list-style: none;	
+	text-transform: uppercase;
+}
+.templatemo-inline-block {
+	display: inline-block;
+	vertical-align: middle;
+}
+.templatemo-block {	display: block; }
+.templatemo-position-relative {	position: relative; }
+.blue-text { color: #D6969E; }
+.white-text { color: #fff; }
+.yellow-bg { background-color: #D8D138; }
+.white-bg {	background-color: #fff; }
+.black-bg {background-color: #1b213b;}
+.white-bg .fa-times { background-color: #d7d7d7; }
+.white-bg .fa-times:hover {	background: #83ccd1; }
+.orange-bg {
+	background-color: #F17A54;
+	color: #fff;
+}
+.orange-bg .fa-times {	background-color: #F0A790; }
+.orange-bg .fa-times:hover { background-color: #E14311; }
+.pink-bg {
+	background-color: #D7425C;
+	color: #fff;
+}
+.pink-bg .fa-times { background-color: #E57C8F;	}
+.pink-bg .fa-times:hover { background-color: #BD1F3B; }
+.blue-bg {
+	background-color: #3275BB;
+	color: #fff;
+}
+.blue-bg .fa-times { background-color: #6792C0; }
+.blue-bg .fa-times:hover { background-color: #2C639C; }
+.light-gray-bg { background-color: #1b213b; }
+.padding-right-25 {	padding-right: 25px; }
+.margin-bottom-0 {	margin-bottom: 0; }
+.margin-bottom-5 {	margin-bottom: 5px; }
+.margin-bottom-10 {	margin-bottom: 10px; }
+.margin-bottom-30 {	margin-bottom: 30px; }
+.margin-bottom-70 {	margin-bottom: 70px; }
+.margin-right-15 { margin-right: 15px; }
+.margin-10 { margin: 10px; }
+.width-100 { width: 100%; }
+.no-border { border: none; }
+.border-radius-10 { border-radius: 10px; }
+
+
+
+
+/* 2. Left Column
+-----------------------------*/
+.templatemo-sidebar { width: 250px;}
+.square {
+	width: 10px;
+	height: 10px;
+	border: 3px solid #00A99D;
+	display: inline-block;
+	vertical-align: middle;
+}
+.circle {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+}
+.templatemo-site-header { 
+	margin: 25px 30px;
+}
+.templatemo-site-header h1 {
+	color: #fff;
+	display: inline-block;
+	font-size: 1.8em;
+	font-weight: 300;
+	letter-spacing: 1.5px;
+	margin: 0 5px;	
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+
+.templatemo-site-header-GL { margin: 5px 5px; }
+.templatemo-site-header-GL h1 {
+	color: #003A2F;
+	font-size: 1.8em;
+	font-weight: 500;
+	letter-spacing: 1.5px;
+	margin: 0 5px;	
+	text-transform: uppercase;
+}
+
+.profile-photo-container { position: relative; }
+.profile-photo-overlay {
+	background-color: rgba(4, 152, 114, 0.35);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: all 0.3s ease;
+}
+.profile-photo-overlay:hover { background-color: rgba(4, 152, 114, 0); }
+
+/* Search form */
+/*.templatemo-search-form {
+	font-size: 1.1em;
+	margin: 50px 20px;		
+}*/
+.templatemo-search-form .input-group { width: 100%; }
+.templatemo-search-form .input-group .form-control {
+	background-color: #18191b;
+	border: none;
+	border-radius: 10px;
+	color: #DDD;
+	padding-left: 30px;
+}
+.form-control:focus { /*ao clicar no input*/
+  border-color: #00A99D;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(19,137,95,.075),0 0 8px rgba(19,137,95,.6);
+  background-color:#fff;
+}
+.form-control.highlight { /*senha*/
+	background-color:#fff;
+	color:#000;
+}
+.form-control.highlight::-webkit-input-placeholder { /* WebKit browsers */
+    color:#ccc;
+}
+.form-control.highlight:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:#ccc;
+   opacity:1;
+}
+.form-control.highlight::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:#ccc;
+   opacity:1;
+}
+.form-control.highlight:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:#ccc;
+}
+.templatemo-search-form .input-group { position: relative; }
+.fa-search {
+    height:32px;
+    width:32px;
+    border: none;
+    cursor: pointer;
+    color:#fff;
+    background:transparent;
+    position:absolute;
+    top: 0;
+	left: 0;
+	z-index: 100;
+}
+.mobile-menu-icon { 
+	cursor:pointer;
+	display:none; 
+}
+.templatemo-left-nav{margin-top: 30px;}
+.templatemo-left-nav li {font-weight: 300; line-height: 1;}
+.templatemo-left-nav a:hover,
+.templatemo-left-nav a:active {/*Cores do Menu*/
+	background: #39566b;
+	border-left: 6px solid #1d8084;
+	color: #fff;
+}
+.templatemo-left-nav>ul>li>a>i {/*Cores do icone do Menu*/
+	color: #226468;
+}
+.menu-ativo>a>i {/*Cores do icone do Menu*/
+	color: #3FE8CF !important;
+}
+.templatemo-left-nav a:hover>i,
+.templatemo-left-nav a:active>i {/*Cores do icone do Menu*/
+	color: #3FE8CF;
+}
+.templatemo-left-nav a {
+	color: #39566b;
+	display: block;
+	padding: 15px;
+	transition: all 0.3s ease;
+}
+.templatemo-left-nav .fa { margin-right: 15px; }
+
+/* 3. Right Column
+------------------------------*/
+.templatemo-top-nav-container {
+	background-color: #222; /*cor da barra superior*/
+	padding: 4px 15px;
+ 	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.templatemo-top-nav li {
+    float: left;
+    list-style: none;
+}
+.templatemo-top-nav a {
+	color: #7f7f7f;
+    display: block;
+    padding: 0 50px;
+    border-left: 2px solid #c5c5c5;
+}
+.templatemo-top-nav li:last-child a { border-right: 2px solid #c5c5c5; }
+.templatemo-top-nav a:hover,
+.templatemo-top-nav a:active {
+	color: #D6969E;
+}
+
+/* Main Content Area */
+.templatemo-content {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  min-height: 600px;
+  padding: 0;  
+  overflow-x: hidden;
+}
+.templatemo-content-container {
+	padding: 10px 13px;
+	background-color: #1b213b; /*cor do fundo principal - altera também linha 59*/
+	height: 100vh; /*------PROPRIEDADE PARA ALTURA 100%. PRECISA SER APLICADA TB NA TAG PAI HTML*/
+}
+.templatemo-flex-row {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.col-1 {
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+.col-2 {
+	-webkit-flex: 2;
+	    -ms-flex: 2;
+	        flex: 2;
+}
+
+/* Content Widget */
+.templatemo-content-widget {
+	border-radius: 0px;
+	padding: 10px;	
+	position: relative;
+	margin: 5px;
+ 	/*box-shadow: 0px 0px 1px 1px rgba(161, 159, 159, 0.1);*/
+}
+.templatemo-content-widget.no-padding {	padding: 0; }
+.fa-times {
+	border-radius: 15px;
+  	color: white;
+  	cursor: pointer;
+	padding: 4px 5px;
+  	position: absolute;
+  	top: 15px;
+  	right: 15px;
+  	z-index: 100;
+  	transition: all 0.3s ease;
+}
+.fa-heart {
+  color: white;
+  cursor: pointer;
+  font-size: 1.4em;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+.fa-heart:hover { color: #D6969E; }
+.progress {	display: block; }
+.panel-default>.panel-heading {
+	background-color: #D6969E;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	color: white;
+	padding: 15px;
+}
+.panel-default .fa-times {
+	top: 12px;
+	background-color: #67B5B9;
+}
+.panel-default .fa-times:hover { background-color: #297B7F;	}
+.panel { border-radius: 10px; }
+.pagination-wrap {
+	margin-right: 10px;
+	text-align: right;
+}
+.pagination>li>a {
+	border-color: #E9E8E8;
+	color: #a6a6a6;
+	margin: 2px;
+	padding: 10px;	
+}
+.pagination>li>a,
+.pagination>li:first-child>a,
+.pagination>li:last-child>a {
+	border-radius: 10px;
+}
+.pagination>.active>a, 
+.pagination>.active>a:focus, 
+.pagination>.active>a:hover {
+	background-color: #D6969E;
+	border-color: #E9E8E8;
+}
+.table { margin-bottom: 0; }
+.table>tbody>tr>td { padding: 9px 9px; }
+.table>thead>tr>td { 
+	padding: 9px 9px;
+}
+.media { margin-top: 0; }
+.media-body { vertical-align: middle; }
+.badge {
+	background-color: #d6973d;
+	border-radius: 5px;
+	margin-left: 5px;
+	padding: 5px 10px;
+	vertical-align: top;
+}
+.templatemo-img-bordered {
+	border: 1px solid #ccc;
+	padding: 3px;
+}
+
+/* 4. Charts & Maps - http://codepen.io/shoogledesigns/pen/BfLkA
+----------------------------------------------------------------*/
+.templatemo-chart {
+	width: 100%;
+	height: 300px;
+}
+#timeline_div {	height: auto; }
+
+/* JQVMap */
+.jqvmap-zoomin, .jqvmap-zoomout {
+    width: 15px;
+    height: 15px;
+}
+.vmap { height: 300px; }
+
+/* 5. Login
+------------------------------*/
+.templatemo-login-widget {
+	max-width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 30px 50px;
+	border-radius: 6px; /*incluí cantos arredondados*/
+}
+.templatemo-login-widget .square {
+	width: 18px;
+	height: 18px;
+}
+.templatemo-login-widget header { margin-bottom: 40px; }
+.templatemo-login-widget h1 {
+	display: inline-block;
+	font-size: 1.2em;
+	text-align: center;
+	vertical-align: middle;
+}
+/* .templatemo-login-form .form-group { margin-bottom: 20px; } */
+.templatemo-login-form .form-group:last-child {	margin-bottom: 0; }
+.input-group-addon { background: none; }
+
+/*Botões*/
+.btn-primary {
+	border-radius: 2px;
+	background-color: #00A99D;
+	border: none;	
+	color: #fff;	
+}
+.btn-primary:hover { background-color: #23CCB7; }
+
+.templatemo-blue-button, 
+.templatemo-white-button,
+.templatemo-black-button {
+	border-radius: 10px;
+	padding: 5px 15px;
+	text-transform: uppercase;
+	transition: all 0.3s ease;
+}
+.templatemo-blue-button {
+	background-color: #297B7F;
+	border: 1px solid #00A99D;
+	color: #fff;
+	margin-left: 2px;	
+}
+.templatemo-blue-button:hover {	background-color: #00A99D; }
+.templatemo-white-button {
+	background-color: #1b213b;
+	border: 1px solid #39566b;	
+	color: #fff;	
+}
+.templatemo-white-button:hover { 
+	background-color: #496d86;
+}
+
+/*Fim - Botão*/
+
+.templatemo-register-widget {
+	max-width: 450px;
+	padding: 15px;
+	text-align: center;
+}
+.templatemo-register-widget p {	margin-bottom: 0; }
+.checkbox label { padding-left: 0; }
+.font-weight-400 { font-weight: 400; }
+
+/* Style checkboxes and radio buttons
+http://webdesign.tutsplus.com/tutorials/quick-tip-easy-css3-checkboxes-and-radio-buttons--webdesign-8953 */
+input[type="checkbox"] {  display:none; }
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:26px;
+    height:25px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:url(../images/checkbox-radio-sheet2.png) left top no-repeat;
+    cursor:pointer;
+}
+input[type="checkbox"]:checked + label span {
+    background:url(../images/checkbox-radio-sheet2.png) -26px top no-repeat;
+}
+input[type="radio"] { display:none; }
+input[type="radio"] + label span {
+    display:inline-block;
+    width:26px;
+    height:25px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:url(../images/checkbox-radio-sheet2.png) -52px top no-repeat;
+    cursor:pointer;
+}
+input[type="radio"]:checked + label span {
+    background:url(../images/checkbox-radio-sheet2.png) -78px top no-repeat;
+}
+
+/* 6. Manage Users
+------------------------------*/
+.templatemo-sort-by:hover {	color: #ded9d9; }
+.templatemo-edit-btn {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	color: black;
+	padding: 5px 15px;
+	transition: all 0.3s ease;
+}
+.templatemo-edit-btn:hover {
+	background-color: #D6969E;
+	border: 1px solid #D6969E;
+	color: white;
+}
+.templatemo-link { color: black; }
+.templatemo-link:hover { color: #D6969E; }
+.templatemo-overflow-hidden { overflow: hidden; }
+.templatemo-user-table thead {
+	background-color: #D6969E;
+	color: white;
+}
+.panel>.table-responsive:last-child>.table:last-child, .panel>.table:last-child {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.panel>.table:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.templatemo-social-icons-container {
+	background-color: #f4f3f3;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	box-shadow: 0px 0px 1px 1px rgba(161, 159, 159, 0.1);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top: 1px solid #dedede;
+}
+.social-icon-wrap {
+	width: 33%;
+	height: 100%;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+.social-icon-wrap:nth-child(2) {
+	border-left: 1px solid #dedede;
+	border-right: 1px solid #dedede;
+}
+.templatemo-social-icon {
+	background-color: #a6a6a6;
+	border-radius: 50%;
+	color: white;
+	cursor: pointer;
+	font-size: 1.5em;
+	padding-top: 8px;
+	width: 35px;
+	height: 35px;
+	transition: all 0.3s ease;
+}
+.templatemo-social-icon:hover {	background-color: #D6969E; }
+.templatemo-content-img-bg {
+	background-position: center;
+	background-attachment: stretch;
+	min-height: 300px;
+}
+.content-bg-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+}
+.view-img-btn-wrap {
+	position: absolute;
+	bottom: 50px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+.templatemo-view-img-btn {
+	background-color: #f4f3f3;	
+	border: none;
+	border-radius: 5px;
+	color: #a6a6a6;
+	padding: 10px 50px;
+	text-transform: uppercase;
+	transition: all 0.3s ease;
+}
+.templatemo-view-img-btn:hover {
+	background-color: #D6969E;
+	color: white;
+}
+
+/* 7. Preferences
+-------------------------------*/
+.has-success .checkbox, .has-success .checkbox-inline, .has-success .control-label, .has-success .help-block, 
+.has-success .radio, .has-success .radio-inline, .has-success.checkbox label, .has-success.checkbox-inline label, 
+.has-success.radio label, .has-success.radio-inline label {
+	color: #D6969E;
+}
+.has-success .form-control { border-color: #D6969E; }
+.has-warning .checkbox, .has-warning .checkbox-inline, .has-warning .control-label, .has-warning .help-block, 
+.has-warning .radio, .has-warning .radio-inline, .has-warning.checkbox label, .has-warning.checkbox-inline label, 
+.has-warning.radio label, .has-warning.radio-inline label {
+	color: #CF922C;
+}
+.has-warning .form-control { border-color: #CF922C; }
+.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, 
+.has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, 
+.has-error.radio label, .has-error.radio-inline label {
+	color: #D7425C;
+}
+.has-error .form-control { border-color: #D7425C; }
+.templatemo-multi-select {
+	min-width: 200px;
+	height: 100px;
+	overflow-y: scroll;	
+}
+
+.templatemo-div-titulo {
+/*display:flex; /*comando para alinhamento*/
+align-items:center; /*para alinhar na vertical*/
+justify-content:center; /*para alinhar na horizontal*/
+font-weight:bold important!;
+}
+
+/* 8. Media Queries
+------------------------------*/
+@media screen and (max-width: 1199px) and (min-width: 991px) {
+	.templatemo-site-header { margin: 25px; }
+	.templatemo-sidebar { width: 250px;	}
+	.templatemo-search-form { margin: 20px; }
+	nav li { font-size: 1em; }
+	.templatemo-left-nav a { padding: 15px; }
+	.templatemo-top-nav a { padding: 0 15px; }
+}
+
+@media screen and (max-width: 1199px) {
+	.templatemo-flex-row.flex-content-row { display: block;	}
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+	.templatemo-site-header,
+	.templatemo-search-form { 
+		margin: 15px; 
+	}
+	.templatemo-sidebar { width: 200px; } 
+	.templatemo-site-header h1 { font-size: 1.6em; }
+	.square { 
+		width: 20px; 
+		height: 20px;
+	}
+	.templatemo-left-nav a.active,
+	.templatemo-left-nav a:hover {
+		border-left: 6px solid #00A99D;		
+	}	
+	.templatemo-top-nav-container {	padding: 4px 15px;	}
+	.templatemo-top-nav a { padding: 0 15px; }
+}
+
+@media screen and (max-width: 992px) {
+	nav li { font-size: 1em; }
+	.templatemo-left-nav a { padding: 15px 10px; }	
+	.templatemo-content-container {	padding: 5px; }
+}
+@media only screen and (min-width: 768px) {
+	.templatemo-left-nav {	display: block !important; }
+}
+@media screen and (max-width: 767px) {
+	.templatemo-flex-row { display: block; }
+	.templatemo-site-header { margin: 20px 15px; }
+	.profile-photo-container { display: none; /* Hide profile photo on mobile view */	}
+	.templatemo-search-form { margin: 10px; }
+	.templatemo-top-nav-container {	padding: 10px; }
+	.templatemo-top-nav a { 
+		border-left: 1px solid #c5c5c5;
+		padding: 0 7px; 
+	}
+	.templatemo-top-nav li:last-child a { border-right: 1px solid #c5c5c5; }
+	.templatemo-content-widget { padding: 15px;	}
+
+	/* Left column */
+	.templatemo-left-nav {
+		display: none;
+		position: fixed;
+		top: 10px;
+		right: 50px;		
+		height: 300px;
+		overflow: auto;
+		width: 200px;
+		z-index: 999;
+	}
+	.templatemo-left-nav a.active, 
+	.templatemo-left-nav a:hover {
+		border-left: 4px solid #00A99D;	
+	}
+	.mobile-menu-icon {
+		cursor: pointer;
+		display: block;
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		z-index: 1000;
+	}
+	.mobile-menu-icon:hover .fa { background-color: #333; }
+	.mobile-menu-icon .fa {
+		color: #fff;
+		background-color: #333;
+		font-size: 1.5em;
+		width: 40px;
+		height: 40px;
+		padding-top: 9px;
+		padding-left: 11px;
+	}
+}
+
+/*Adições*/
+
+
+footer {padding: 0px 15px; bottom: 0px; position: absolute; right: 0; display: block;} /*-----fOOTER-----*/
+
+.texto-link {color: #297B7F;}
+.texto-link:visited {color: #297B7F;}
+.texto-link:hover {color: #ff294c;}
+
+.green-bg {background-color: #39566b; }
+
+.logo-GL {
+	z-index: 999;
+	margin-bottom: 10px;
+}
+.fa-angle-left {
+	color: #39566b;
+	position: relative;
+	top: 2px;
+}
+.fa-angle-left:hover {
+	color: #39566b;
+}
+.templatemo-black-button {
+	background-color: #39566b;
+	border: 1px solid #39566b;
+	color: #fff;
+	display: inline;
+}
+.templatemo-black-button:hover {
+	background-color: #297B7F;
+	border: 1px solid #297B7F;
+	color: #fff;
+	box-shadow: #39566b;
+}
+.line-company {
+	border-bottom: 1px solid #39566b;
+	padding-bottom: 20px;
+	margin-bottom: 10px;
+}
+.icon-action {
+	display: inline;
+	position: absolute;
+	right: 20px;
+}
+#nome-empresa{
+	font-size: 14px;
+	position: relative;
+	top: 5px;
+	left: 10px;
+	display: inline;
+}
+.templatemo-green-button {
+	border-radius: 2px;
+	border-bottom: 1px solid #222;
+	padding: 5px 15px;
+	text-transform: uppercase;
+	transition: all 0.3s ease;
+}
+.templatemo-green-button {
+	background-color: #39566b;
+	border: 1px solid #39566b;
+	color: #fff;
+	margin-left: 2px;	
+}
+.templatemo-green-button:hover {
+	background-color: #1d8084; 
+}
+.menu-ativo a {
+	background: #39566b;
+	border-left: 6px solid #1d8084;
+	color: #fff;
+}
+
+.title-label-login {
+	position: relative;
+	left: 0px;
+	bottom: -5px;
+	text-transform: uppercase;
+}
+
+.templatemo-white-button-login {
+	border-radius: 20px;
+	padding: 5px 15px;
+	font-weight: bold;
+	transition: all 0.3s ease;
+	background-color: #fff;
+	border: 1px solid #39566b;	
+	color: #39566b;
+	width: 100px;
+	height: 40px;
+}
+.templatemo-white-button-login:hover { 
+	background-color: #1d8084;
+	color: #39566b;
+	border: 1px solid #fff;
+}
+.input-group-addon {
+    padding:6px 12px;
+    font-size:14px;
+    font-weight:400;
+    line-height:1;
+    color:#fff;
+    text-align:center;
+    background:none;
+    border-bottom:1px solid #fff;
+}
+
+/*---RONDA---*/
+
+h2>a>i.fa-arrow-alt-circle-left{color: #39566b;}
+h2>a>i.fa-arrow-alt-circle-left:hover{color: #3FE8CF;}
+
+a>i.fa-home{color: #297B7F;}
+a>i.fa-home:hover{color: #3FE8CF;}
+.btn-home{right: 10px; position:absolute; display: inline;}
+.container-home{padding: 0 10px 10px;}
+.box-home{padding: 5px;}
+.inter-box{
+	background: #fff;
+	border-radius: 4px;
+	font-size: 16px;
+	text-align: center;
+	padding: 20px 5px;
+	color: #00A99D;
+	transition: all 0.3s;
+}
+.inter-box:hover{
+	background: #00A99D;
+	color: #fff;
+	transition: all 0.3s;
+}
+thead tr{
+	background: #1d8084;
+
+}
+.input-search{
+	padding: 5px;
+	border-radius: 5px;
+	border: #23CCB7 solid 1px;
+	width: 150px;
+	color: black;
+	margin-bottom: 10px;
+}
+.input-select{
+	padding: 5px;
+	border-radius: 5px;
+	border: #23CCB7 solid 1px;
+	width: 50px;
+	color: black;
+	margin-bottom: 10px;
+}
+.info_paginas{
+	margin-top: 10px;
+	text-align: center;
+}
+#h1-painel{
+	margin-left: -5%;
+}
+
+/*---TELA LOGIN RONDA---*/
+.bg-login{background-image: linear-gradient(#1d8084,#1b213b);}
+.content-first{justify-content: center;}
+.container-login{
+	height: auto !important;
+	margin: auto !important;
+	margin-top: 7% !important;
+	border-radius: 10px;
+	padding: 50px;
+	text-align: center;
+	background-color: #1b213b;
+	position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.logo-ronda-login{width: auto;}
+.titulo-login{
+	padding: 30px 0;
+}
+
+.formLine{padding: 10px;}
+.formLine i{padding-right: 5px; color: #23CCB7;}
+.input-login{
+	padding: 5px;
+	border-radius: 5px;
+	border: #23CCB7 solid 1px;
+	width: 200px;
+	height: 40px;
+	color: #67B5B9;
+}
+input#login.input-login:focus-visible{outline-offset:unset}
+.btn-login {
+	border-radius: 4px;
+	padding: 10px 50px;
+	text-transform: uppercase;
+	transition: all 0.3s ease;
+	background-color: #39566b;
+	border: 1px solid #39566b;
+	color: #fff;
+	margin: 5px;	
+}
+.btn-login:hover {
+	background-color: #1d8084; 
+}
+
+/*Rotina Médica*/
+.box-rotina{
+	background: #fff;
+	border-radius: 10px;
+	font-size: 16px;
+	text-align: center;
+	/* padding: 20px 5px; */
+	color: #00A99D;
+	transition: all 0.3s;
+	height: 100px;
+	vertical-align: middle;
+}
+.box-rotina:hover{
+	background: #00A99D;
+	color: #fff;
+	transition: all 0.3s;
+}
+.icon-rotina{
+	float: left;
+	background: #00a99d;
+	height: 100px;
+	border-radius: 10px 0 0 10px;
+	padding: 0 10px;
+}
+.box-rotina:hover>.icon-rotina{
+	border-left: 3px solid #fff;
+	transition: all 0.1s;
+}
+.icon-rotina i{
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+	color:#fff;
+}
+.content-rotina{
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/*Rotinas*/
+.fa-eye{font-size: 16px;}
+
+/*Rotina Nova*/
+.box-rotina-nova{
+	background: #fff;
+	border-radius: 10px;
+	font-size: 16px;
+	padding: 20px;
+	color: #00A99D;
+	transition: all 0.3s;
+	height: 200px;
+	vertical-align: middle;
+}
+.box-rotina-nova:hover{
+	box-shadow: 0px 0px 10px 8px #00000020;
+	transition: all 0.3s;
+}
+.header-rotina-medica{
+	background: #39566b;
+	width: 100%;
+	height: auto;
+	padding: 5px 10px;
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+.header-rotina-medica h3{color: #23CCB7; font-weight: bolder;}
+.title-box-rotina{
+	font-size: 21px; 
+	font-weight: bolder; 
+	color: #2C639C; 
+	border-bottom: #2C639C 1px solid; 
+	margin-bottom: 10px;
+}
+.content-box-rotina{
+	line-height: 1.2;
+	color: #39566b;
+}
+a>.box-rotina-nova:visited{
+	text-decoration: none;
+}
+.btn-eye{
+	float: right;
+}
+
+/*LEITOS OCUPADOS*/
+.box-lo{
+	background: #fff;
+	border-radius: 10px;
+	font-size: 16px;
+	text-align: center;
+	/* padding: 20px 5px; */
+	color: #b45d5d;
+	transition: all 0.3s;
+	height: 100px;
+	vertical-align: middle;
+}
+.box-lo:hover{
+	background: #b45d5d;
+	color: #fff;
+	transition: all 0.3s;
+}
+.i-leitos-ocupados{
+	float: left;
+	background: #b45d5d;
+	height: 100px;
+	border-radius: 10px 0 0 10px;
+	padding: 0 10px;
+}
+.box-lo:hover>.i-leitos-ocupados{
+	border-left: 3px solid #fff;
+	transition: all 0.1s;
+}
+.i-leitos-ocupados i{
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+	color:#fff;
+}
+
+/*Box movimentação paciente*/
+.box-mov{
+		background: #fff;
+		border-radius: 10px;
+		font-size: 16px;
+		text-align: center;
+		/* padding: 20px 5px; */
+		color: #b45d5d;
+		transition: all 0.3s;
+		height: 100px;
+		vertical-align: middle;
+}
+.box-mov:hover{
+	background: #b45d5d;
+	color: #fff;
+	transition: all 0.3s;
+}
+.icon-mov{
+	float: left;
+	background: #b45d5d;
+	height: 100px;
+	border-radius: 10px 0 0 10px;
+	padding: 0 10px;
+}
+.box-mov:hover>.icon-mov{
+	border-left: 3px solid #fff;
+	transition: all 0.1s;
+}
+.icon-mov i{
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+	color:#fff;
+}
+.content-mov{
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*Box movimentação paciente 2 etapa*/
+.box-mov-2{
+	background: #fff;
+	border-radius: 10px;
+	font-size: 16px;
+	text-align: center;
+	/* padding: 20px 5px; */
+	color: #00A99D;
+	transition: all 0.3s;
+	height: 100px;
+	vertical-align: middle;
+}
+.box-mov-2:hover{
+background: #00A99D;
+color: #fff;
+transition: all 0.3s;
+}
+.icon-mov-2{
+float: left;
+background: #00A99D;
+height: 100px;
+border-radius: 10px 0 0 10px;
+padding: 0 10px;
+}
+.box-mov-2:hover>.icon-mov-2{
+border-left: 3px solid #fff;
+transition: all 0.1s;
+}
+.icon-mov-2 i{
+position: relative;
+top: 50%;
+transform: translateY(-50%);
+color:#fff;
+}
+.content-mov-2{
+position: relative;
+top: 50%;
+transform: translateY(-50%);
+}
+
+/*FORMS - FUNDO BRANCO*/
+.box-bg-white{
+	background: #fff;
+	border-radius: 5px;
+	color: #39566b;
+	padding: 10px;
+	bottom: -10px;
+	position: relative;
+}
+.box-bg-white>h3{
+	color: #00A99D;
+	font-weight: bold;
+	font-variant:all-small-caps;
+	padding: 5px;
+}
+
+.box-intercorrencia-nova{
+	background: #fff;
+	border-radius: 10px;
+	font-size: 16px;
+	padding: 20px;
+	color: #00A99D;
+	transition: all 0.3s;
+	height: auto;
+	vertical-align: middle;
+}
